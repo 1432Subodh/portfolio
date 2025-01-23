@@ -26,7 +26,7 @@ function Hero() {
         />
       </div>
       <div className='flex justify-center items-center flex-col gap-1'>
-        <p className='text-sm text-zinc-500'>Hello, I'm</p>
+        <p className='text-sm text-zinc-500'>Hello, I&apos;m</p>
         <h1 className={`sm:text-5xl text-4xl font-semibold tracking-widest ${ubuntu.className}`}>Subodh Ravidas</h1>
         <p className='text-zinc-500'>Full Stack Developer</p>
         <div className='flex space-x-4 mt-4'>
