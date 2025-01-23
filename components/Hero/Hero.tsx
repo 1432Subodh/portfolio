@@ -13,10 +13,17 @@ function Hero() {
 
 
   return (
-    <main className='w-full flex justify-between items-center sm:px-80 sm:py-44 py-20 sm:flex-row flex-col gap-5'>
+    <main className='w-full flex justify-between items-center sm:px-72 sm:py-44 py-20 sm:flex-row flex-col gap-5'>
       {/* Wrapper div to apply ref */}
       <div >
-      <img src="subodh.jpg" alt="" className="w-64 h-64 object-cover rounded-full border"/>
+        <Image
+          src={'/subodh.jpg'}
+          alt='Subodh Ravidas'
+          width={250}
+          height={250}
+          className='rounded-full'
+          // loading='lazy'
+        />
       </div>
       <div className='flex justify-center items-center flex-col gap-1'>
         <p className='text-sm text-zinc-500'>Hello, I&apos;m</p>
