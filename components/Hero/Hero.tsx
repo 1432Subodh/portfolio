@@ -23,7 +23,6 @@ function Hero() {
   height={250}
   className="rounded-full"
   loading="lazy" // Default behavior for non-priority images
-  quality={75} // Reduces quality to optimize size (default is 75, lower to ~50 for slower networks)
   placeholder="blur" // Displays a low-quality blurred version of the image while it loads
   blurDataURL="/image-placeholder.png" // Low-res placeholder image URL
   sizes="(max-width: 768px) 150px, 250px" // Serves appropriate sizes for different screen widths
