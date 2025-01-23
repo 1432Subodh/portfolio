@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import { quattrocento } from '../Navbar/Navbar'
-import { Button } from '../ui/button'
 import { Ubuntu } from 'next/font/google'
 
 export const ubuntu = Ubuntu({

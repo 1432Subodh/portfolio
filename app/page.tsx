@@ -21,6 +21,7 @@ function Page() {
  
 
 const locomotiveScroll = new LocomotiveScroll();
+console.log(locomotiveScroll)
 
 
   return (

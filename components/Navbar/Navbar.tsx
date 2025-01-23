@@ -54,7 +54,7 @@ function Navbar() {
                 {
                     icons.map((icon, index) => (
 
-                        <a href={icon.link} target='_blank' className="cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 hover:rotate-12 hover:bg-gradient-to-r hover:from-white hover:via-blue-500 hover:to-orange-500 hover:bg-clip-text">
+                        <a key={index} href={icon.link} target='_blank' className="cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 hover:rotate-12 hover:bg-gradient-to-r hover:from-white hover:via-blue-500 hover:to-orange-500 hover:bg-clip-text">
                             {icon.icon}
                         </a>
                     ))
