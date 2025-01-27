@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect } from "react"
 import {
   Mountain,
   Trees,
@@ -61,12 +61,8 @@ export function CategorySection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const controls = useAnimation()
   const inView = useInView(scrollContainerRef)
-  // Remove this line
-  //const [currentX, setCurrentX] = useState(0)
 
   useEffect(() => {
-    let intervalId: NodeJS.Timeout
-
     const startScrolling = () => {
       controls.start({
         x: [-1920, 0],
@@ -88,7 +84,6 @@ export function CategorySection() {
     }
 
     return () => {
-      if (intervalId) clearInterval(intervalId)
       controls.stop()
     }
   }, [controls, inView])
@@ -158,4 +153,3 @@ export function CategorySection() {
     </section>
   )
 }
-
