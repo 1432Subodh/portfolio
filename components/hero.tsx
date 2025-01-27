@@ -20,7 +20,17 @@ export function Hero() {
             src="/image.jpg"
             alt="Luxury lodge interior"
             fill
-            className={`object-cover transition-opacity duration-500 ${
+            className={`object-cover transition-opacity duration-500 sm:block hidden ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            priority
+            onLoadingComplete={() => setImageLoaded(true)}
+          />
+          <Image
+            src="/image2.jpg"
+            alt="Luxury lodge interior"
+            fill
+            className={`object-cover transition-opacity duration-500 sm:hidden block ${
               imageLoaded ? "opacity-100" : "opacity-0"
             }`}
             priority
