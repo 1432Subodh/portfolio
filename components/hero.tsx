@@ -11,8 +11,8 @@ export function Hero() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-4">
-      <div className="relative w-full h-[550px] sm:h-[550px] md:h-[550px] rounded-lg overflow-hidden">
+    <div className="px-4 sm:px-6 lg:px-6 py-1 sm:py-4">
+      <div className="relative w-full h-[450px] sm:h-[550px] md:h-[550px] rounded-lg overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           {!imageLoaded && <Skeleton className="absolute inset-0 h-full w-full" />}
