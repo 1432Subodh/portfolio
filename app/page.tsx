@@ -1,38 +1,24 @@
-'use client'
-import Hero, { ubuntu } from '@/components/Hero/Hero';
-import Loading from '@/components/Loading/Loading'
-import Navbar from '@/components/Navbar/Navbar';
-import { ModeToggle } from '@/components/theme/ThemeToggle'
-import React, { useEffect, useState } from 'react'
-import LocomotiveScroll from 'locomotive-scroll';
+import { Header } from "@/components/header"
+import { Hero } from "@/components/hero"
+import { CategorySection } from "@/components/category-section"
+import { PopularLodges } from "@/components/popular-lodges"
+import { TestimonialSection } from "@/components/testimonial-section"
+import { CallToAction } from "@/components/call-to-action"
+import { Footer } from "@/components/footer"
 
-function Page() {
-  const [isLoading, setIsLoading] = useState(true);
-
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000);
-  }, []);
-  if (isLoading) {
-    return <Loading />;
-  }
- 
-
-const locomotiveScroll = new LocomotiveScroll();
-console.log(locomotiveScroll)
-
-
+export default function Home() {
   return (
-    <div className={ubuntu.className}>
-      <Navbar/>
-      <Hero/>
-      
-      {/* <h1>Page content</h1> */}
-      <ModeToggle />
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <CategorySection />
+        <PopularLodges />
+        <TestimonialSection />
+        <CallToAction />
+      </main>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default Page;
