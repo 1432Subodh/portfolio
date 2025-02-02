@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function CallToAction() {
   return (
@@ -17,9 +18,11 @@ export function CallToAction() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Book your perfect lodge now and experience the beauty of nature combined with luxurious comfort.
           </p>
+          <Link href={'/lodge'}>
           <Button size="lg" variant="secondary">
             Find Your Lodge
           </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

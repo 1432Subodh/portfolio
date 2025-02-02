@@ -3,7 +3,7 @@ import { Star, Users, Bath, Bed } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card"
 import { Button } from "./ui/button"
 
-interface LodgeCardProps {
+export interface LodgeCardProps {
   name: string
   price: number
   location: string
@@ -16,7 +16,7 @@ interface LodgeCardProps {
 
 export function LodgeCard({ name, price, location, image, rating, beds, baths, guests }: LodgeCardProps) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden">  
       <CardHeader className="p-0">
         <div className="aspect-[4/3] relative">
           <Image src={image || "/placeholder.svg"} alt={name} fill className="object-cover" />

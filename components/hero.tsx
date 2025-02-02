@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton"; // Import Skeleton
 import { useState } from "react";
+import Link from "next/link";
 
 export function Hero() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -20,9 +21,8 @@ export function Hero() {
             src="/image.jpg"
             alt="Luxury lodge interior"
             fill
-            className={`object-cover transition-opacity duration-500 sm:block hidden ${
-              imageLoaded ? "opacity-100" : "opacity-0"
-            }`}
+            className={`object-cover transition-opacity duration-500 sm:block hidden ${imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
             priority
             onLoadingComplete={() => setImageLoaded(true)}
           />
@@ -30,9 +30,8 @@ export function Hero() {
             src="/image2.jpg"
             alt="Luxury lodge interior"
             fill
-            className={`object-cover transition-opacity duration-500 sm:hidden block ${
-              imageLoaded ? "opacity-100" : "opacity-0"
-            }`}
+            className={`object-cover transition-opacity duration-500 sm:hidden block ${imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
             priority
             onLoadingComplete={() => setImageLoaded(true)}
           />
@@ -71,22 +70,30 @@ export function Hero() {
           )}
           {/* Skeleton for Input and Button */}
           {!imageLoaded ? (
-            <div className="w-full max-w-md flex gap-2">
-              <Skeleton className="flex-1 h-10" />
-              <Skeleton className="w-24 h-10" />
-            </div>
+            <>
+              <div className="w-full max-w-md flex gap-2">
+                <Skeleton className="flex-1 h-10" />
+                <Skeleton className="w-24 h-10" />
+              </div>
+              <Skeleton className="w-24 h-10 mt-4" />
+            </>
           ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="w-full max-w-md flex gap-2"
-            >
-              <Input type="search" placeholder="Search locations, amenities..." className="flex-1" />
-              <Button size="default" className="px-4 py-0.5">
-                Search
-              </Button>
-            </motion.div>
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="w-full max-w-md flex gap-2"
+              >
+                <Input type="search" placeholder="Search locations, amenities..." className="flex-1" />
+                <Button size="default" className="px-4 py-0.5">
+                  Search
+                </Button>
+              </motion.div>
+              <Link href={'/lodge'}>
+              <Button className="mt-4" variant={'default'} size={'sm'}>Get Started</Button>
+              </Link>
+            </>
           )}
         </div>
       </div>

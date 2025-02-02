@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { LodgeCard } from "./lodge-card"
+import { LodgeCard, LodgeCardProps } from "./lodge-card"
 import { MobileLodgeCard } from "./mobile-lodge-card"
 import { LodgeCardSkeleton } from "./lodge-card-skeleton"
 import { MobileLodgeCardSkeleton } from "./mobile-lodge-card-skeleton"
 import { Button } from "./ui/button"
 
-const lodges = [
+export const lodges: LodgeCardProps[] = [
   {
     name: "Mountain Vista Lodge",
     price: 299,
