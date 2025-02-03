@@ -3,7 +3,6 @@
 import { Star, Users, Bed, Bath, ArrowRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -68,31 +67,31 @@ export function LodgeCard({ name, location, guests, beds, baths, price, rating }
   )
 }
 
-function LodgeCardSkeleton() {
-  return (
-    <Card className="overflow-hidden">
-      <CardContent className="p-0">
-        <Skeleton className="aspect-[4/3] w-full" />
-        <div className="p-4">
-          <div className="flex justify-between items-center mb-2">
-            <Skeleton className="h-6 w-[150px]" />
-            <Skeleton className="h-6 w-[50px]" />
-          </div>
-          <Skeleton className="h-4 w-[200px] mb-4" />
-          <div className="flex justify-between items-center">
-            <div className="flex space-x-4">
-              <Skeleton className="h-4 w-[40px]" />
-              <Skeleton className="h-4 w-[40px]" />
-              <Skeleton className="h-4 w-[40px]" />
-            </div>
-            <Skeleton className="h-8 w-[100px]" />
-          </div>
-          <div className="mt-4">
-            <Skeleton className="h-10 w-full" />
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
+// function LodgeCardSkeleton() {
+//   return (
+//     <Card className="overflow-hidden">
+//       <CardContent className="p-0">
+//         <Skeleton className="aspect-[4/3] w-full" />
+//         <div className="p-4">
+//           <div className="flex justify-between items-center mb-2">
+//             <Skeleton className="h-6 w-[150px]" />
+//             <Skeleton className="h-6 w-[50px]" />
+//           </div>
+//           <Skeleton className="h-4 w-[200px] mb-4" />
+//           <div className="flex justify-between items-center">
+//             <div className="flex space-x-4">
+//               <Skeleton className="h-4 w-[40px]" />
+//               <Skeleton className="h-4 w-[40px]" />
+//               <Skeleton className="h-4 w-[40px]" />
+//             </div>
+//             <Skeleton className="h-8 w-[100px]" />
+//           </div>
+//           <div className="mt-4">
+//             <Skeleton className="h-10 w-full" />
+//           </div>
+//         </div>
+//       </CardContent>
+//     </Card>
+//   )
+// }
 

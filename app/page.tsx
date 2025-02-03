@@ -1,4 +1,3 @@
-import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { CategorySection } from "@/components/category-section"
 import { PopularLodges } from "@/components/popular-lodges"
