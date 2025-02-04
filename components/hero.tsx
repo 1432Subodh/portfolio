@@ -86,13 +86,13 @@ export function Hero() {
                 className="w-full max-w-md flex gap-2"
               >
                 <Input type="search" placeholder="Search locations, amenities..." className="flex-1" />
-                <Button size="default" className="px-4 py-0.5">
+                {/* <Button size="default" className="px-4 py-0.5">
                   Search
-                </Button>
-              </motion.div>
+                </Button> */}
               <Link href={'/lodge'}>
-              <Button className="mt-4" variant={'default'} size={'sm'}>Get Started</Button>
+              <Button size="default" className="px-4 py-0.5">Get Started</Button>
               </Link>
+              </motion.div>
             </>
           )}
         </div>

@@ -156,7 +156,7 @@ export function CategorySection() {
               {[...categories, ...categories].map((category, index) => (
                 <motion.div key={index} className="flex-shrink-0 w-[80px] sm:w-[100px] mr-3 sm:mr-4">
                   <div className="flex flex-col items-center justify-center h-full">
-                    <category.icon className="w-5 h-5 sm:w-6 sm:h-6 mb-1 text-primary" />
+                    <category.icon className="w-5 h-5 sm:w-6 sm:h-6 mb-1 " />
                     <span className="text-[10px] sm:text-xs font-medium text-center">
                       {category.label}
                     </span>

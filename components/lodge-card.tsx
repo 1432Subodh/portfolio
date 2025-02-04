@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Star, Users, Bath, Bed } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 export interface LodgeCardProps {
   name: string
@@ -18,11 +19,11 @@ export function LodgeCard({ name, price, location, image, rating, beds, baths, g
   return (
     <Card className="overflow-hidden">  
       <CardHeader className="p-0">
-        <div className="aspect-[4/3] relative">
+        <div className="aspect-[1/0.7] relative">
           <Image src={image || "/placeholder.svg"} alt={name} fill className="object-cover" />
         </div>
       </CardHeader>
-      <CardContent className="p-3 sm:p-4">
+      <CardContent className="p-3 sm:px-4">
         <div className="flex justify-between items-start mb-2">
           <h3 className="font-semibold text-sm sm:text-base line-clamp-1">{name}</h3>
           <div className="flex items-center">
@@ -46,14 +47,16 @@ export function LodgeCard({ name, price, location, image, rating, beds, baths, g
           </div>
         </div>
       </CardContent>
-      <CardFooter className="p-3 sm:p-4 pt-0 flex items-center justify-between">
+      <CardFooter className="p-3 sm:px-4 pt-0 flex items-center justify-between">
         <div>
           <span className="text-lg sm:text-xl font-bold">${price}</span>
           <span className="text-xs sm:text-sm text-muted-foreground">/night</span>
         </div>
+        <Link href={'/lodge/view/3'}>
         <Button size="sm" className="text-xs sm:text-sm">
           Book Now
         </Button>
+        </Link>
       </CardFooter>
     </Card>
   )

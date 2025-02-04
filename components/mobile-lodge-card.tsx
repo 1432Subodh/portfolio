@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Star, Users, Bath, Bed } from "lucide-react"
 import { Card, CardContent } from "./ui/card"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 interface MobileLodgeCardProps {
   name: string
@@ -28,15 +29,15 @@ export function MobileLodgeCard({ name, price, location, image, rating, beds, ba
               className="object-cover h-full"
             />
           </div>
-          <div className="w-2/3 p-3">
-            <div className="flex justify-between items-start mb-2">
+          <div className="w-2/3 px-3 py-2">
+            <div className="flex justify-between items-start">
               <h3 className="font-semibold text-sm line-clamp-1">{name}</h3>
               <div className="flex items-center">
                 <Star className="w-3 h-3 fill-primary text-primary" />
                 <span className="text-xs ml-1">{rating}</span>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground mb-2">{location}</p>
+            <p className="text-xs text-muted-foreground mb-1">{location}</p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
               <div className="flex items-center gap-1">
                 <Users className="w-3 h-3" />
@@ -56,9 +57,12 @@ export function MobileLodgeCard({ name, price, location, image, rating, beds, ba
                 <span className="text-sm font-bold">${price}</span>
                 <span className="text-xs text-muted-foreground">/night</span>
               </div>
-              <Button size="sm" className="text-xs">
-                Book Now
-              </Button>
+              <Link href={'/lodge/view/3'}>
+
+                <Button size="sm" className="text-xs">
+                  Book Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
